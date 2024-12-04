@@ -1,35 +1,19 @@
 // By VishwaGauravIn (https://itsvg.in)
 const { TwitterApi } = require("twitter-api-v2");
 const { OpenAI } = require("openai");
-
-// Debug: Print environment variables (without sensitive values)
-console.log("Environment variables check:");
-console.log("APP_KEY exists:", !!process.env.APP_KEY);
-console.log("APP_SECRET exists:", !!process.env.APP_SECRET);
-console.log("ACCESS_TOKEN exists:", !!process.env.ACCESS_TOKEN);
-console.log("ACCESS_SECRET exists:", !!process.env.ACCESS_SECRET);
-console.log("OPENAI_API_KEY exists:", !!process.env.OPENAI_API_KEY);
-
-// Validate environment variables
-if (!process.env.APP_KEY || !process.env.APP_SECRET || !process.env.ACCESS_TOKEN || !process.env.ACCESS_SECRET) {
-    throw new Error("Missing required Twitter API credentials in environment variables");
-}
-
-if (!process.env.OPENAI_API_KEY) {
-    throw new Error("Missing OpenAI API key in environment variables");
-}
+const SECRETS = require("./SECRETS");
 
 // Initialize Twitter client
 const twitterClient = new TwitterApi({
-    appKey: process.env.APP_KEY.trim(),
-    appSecret: process.env.APP_SECRET.trim(),
-    accessToken: process.env.ACCESS_TOKEN.trim(),
-    accessSecret: process.env.ACCESS_SECRET.trim(),
+    appKey: SECRETS.APP_KEY,
+    appSecret: SECRETS.APP_SECRET,
+    accessToken: SECRETS.ACCESS_TOKEN,
+    accessSecret: SECRETS.ACCESS_SECRET,
 });
 
 // Initialize OpenAI with custom base URL
 const openai = new OpenAI({
-    apiKey: process.env.OPENAI_API_KEY.trim(),
+    apiKey: SECRETS.OPENAI_API_KEY,
     baseURL: "https://newapi.ggb.today/v1"
 });
 
