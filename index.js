@@ -24,7 +24,7 @@ async function run() {
             model: "gpt-3.5-turbo",
             messages: [{
                 role: "user",
-                content: "generate a web development content, tips and tricks or something new or some rant or some advice as a tweet, it should not be vague and should be unique; under 280 characters and should be plain text, you can use emojis"
+                content: "Generate daily content about the advancements, applications, challenges, and future trends of AI-driven virtual humans/digital humans across various industries, focusing on technology, ethics, and real-world use cases.; under 280 characters and should be plain text, you can use emojis"
             }],
             max_tokens: 100,
             temperature: 0.7,
