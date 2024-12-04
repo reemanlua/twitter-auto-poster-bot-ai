@@ -12,7 +12,7 @@ const SECRETS = {
   APP_SECRET,
   ACCESS_TOKEN,
   ACCESS_SECRET,
-  GEMINI_API_KEY,
+  OPENAI_API_KEY,
 };
 
 module.exports = SECRETS;
