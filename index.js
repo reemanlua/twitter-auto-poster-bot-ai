@@ -21,7 +21,7 @@ async function run() {
     try {
         // Create chat completion with OpenAI
         const completion = await openai.chat.completions.create({
-            model: "gpt-3.5-turbo",
+            model: "gpt-4o",
             messages: [{
                 role: "user",
                 content: "Generate daily content about the advancements, applications, challenges, and future trends of AI-driven virtual humans/digital humans across various industries, focusing on technology, ethics, and real-world use cases.; under 280 characters and should be plain text, you can use emojis"
