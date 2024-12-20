@@ -24,7 +24,7 @@ async function run() {
             model: "gpt-4o",
             messages: [{
                 role: "user",
-                content: "Generate daily content about the advancements, applications, challenges, and future trends of AI-driven virtual humans/digital humans across various industries, focusing on technology, ethics, and real-world use cases.; under 280 characters and should be plain text, you can use emojis"
+                content: "Generate daily content about the advancements, applications, challenges, and future trends of Decentralized Science, Open Science, Biomolecular Science, Molecular Biology, Genetic Engineering, CRISPR, Gene Editing, Gene Therapy, Synthetic Biology, Longevity Research, Human Longevity, the Future of Medicine, and AI in Science; under 280 characters and should be plain text, you can use emojis."
             }],
             max_tokens: 100,
             temperature: 0.7,
